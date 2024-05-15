@@ -16,7 +16,7 @@
 2. I have not tested on Applications that have more than one Approle so im not sure on how that experience will go if you use the script on an application of that variety (I suspect it will fail as it will not be able to find the AppRole Id to assign the user)
 
 
-## HOW TO USE
+## HOW TO USE (Without VScode)
 
 1. To use this script you are going to need to run this command before you can use this script. Open powershell and run: 
 **Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser**
@@ -24,3 +24,8 @@
 
 2. Next navigate to the directory the files are stored in using the cd command and copy pasting the file path.
 3. Type ./main.ps1 into poweshell and on the first run it will install the required modules onto your computer then immediately run the user adding script and then follow the prompts on screen
+
+
+## HOW TO USE (With VSCODE)
+1. Open the folder contaning the script
+2. Click and Run the main.ps1 file by pressing th play button on the top left OR type ./main.ps1 in the terminal window
