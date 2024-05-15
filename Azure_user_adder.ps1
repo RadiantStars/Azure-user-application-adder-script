@@ -15,7 +15,9 @@ catch {
     Exit
 }
 
-$user_emails = $Exceldata."user login"
+$columnname = Read-Host "Enter the name of the column containing the emails in the Excel Sheet: "
+
+$user_emails = $Exceldata.$columnname
 
 
 Write-Host "Login to Azure in the popup"
