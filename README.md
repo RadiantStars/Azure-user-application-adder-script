@@ -18,9 +18,9 @@
 
 ## HOW TO USE
 
-You are going to need to run this command before you can use this script: 
+1. To use this script you are going to need to run this command before you can use this script. Open powershell and run: 
 **Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser**
 (You do no need the stars) After you have run it once you shouldnt have to run it again
 
-1. To use this script open powershell navigate to the directory the files are stored in.
-2. Type ./main.ps1 into poweshell and on the first run it will install the required modules onto your computer then immediately run the user adding script and then follow the prompts on screen
+2. Next navigate to the directory the files are stored in using the cd command and copy pasting the file path.
+3. Type ./main.ps1 into poweshell and on the first run it will install the required modules onto your computer then immediately run the user adding script and then follow the prompts on screen
