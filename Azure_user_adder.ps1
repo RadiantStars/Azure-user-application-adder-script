@@ -43,15 +43,16 @@ if (!$app){
     Exit
 }
 
-
-
+$failures = [System.Collections.Generic.List[string]]::new()
+    
 foreach ($user in $user_emails){
 
-    
+
     $user_profile = Get-AzureADUser -Filter "userPrincipalName eq '$user'"
 
     if(!$user_profile){
         Write-Host "User:$user does not exist"
+        $failures.Add("User:$user does not exist")
         continue
     }
 
@@ -64,6 +65,14 @@ foreach ($user in $user_emails){
     catch {
        Write-Host "User:$user already added"
     }
+
+}
+
+
+if ($failures.Count -gt 0) {
+    # Write the failures to a text file
+    $failures | Out-File -FilePath "Failed $app_name users.txt" -Force
+    Write-Host "Created File Containing users that failed to be added called: Failed $app_name users.txt"
 
 }
 
